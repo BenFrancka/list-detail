@@ -9,16 +9,26 @@ export const fetchCharacters = async () => {
   }));
 };
 
-export const fetchCharacterById = async () => {
-  const id = params.id;
+export const fetchCharacterById = async (id) => {
   const res = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
   const json = await res.json();
 
-  return json.results.map((character) => ({
-    id: character.id,
-    name: character.name,
-    image: character.image,
-    status: character.status,
-    species: character.species
-  }));
+
+  const character = {
+    id: json.id,
+    name: json.name,
+    image: json.image,
+    statues: json.status,
+    species: json.species,
+  };
+console.log(character);
+  return character;
+  
+  // return json.then((character) => ({
+  //   id: character.id,
+  //   name: character.name,
+  //   image: character.image,
+  //   statues: character.status,
+  //   species: character.species,
+  // }));
 };

@@ -9,13 +9,13 @@ export default class RAndMDetailContainer extends Component {
   };
 
   async componentDidMount() {
-    const character = await fetchCharacterById();
+    const character = await fetchCharacterById(this.props.match.params.id);
     this.setState({ character, loading: false });
   }
 
   render() {
     const { character, loading } = this.state;
-    if(loading) {
+    if (loading) {
       return (
         <img
           src="https://thumbs.gfycat.com/SoftEarnestGyrfalcon-max-1mb.gif"
@@ -23,6 +23,16 @@ export default class RAndMDetailContainer extends Component {
         />
       );
     }
-    return <CharacterDetail character={character} />;
+    return (
+      <CharacterDetail
+        character={
+          (character.id,
+          character.name,
+          character.image,
+          character.species,
+          character.status)
+        }
+      />
+    );
   }
 }
