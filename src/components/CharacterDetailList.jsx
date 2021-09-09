@@ -4,16 +4,14 @@ import CharacterDetail from './CharacterDetail';
 
 const CharacterDetailList = ({ character }) => (
   <ul aria-label="rick and morty character details">
-    {character.map((character) => (
-      <li key={character.id}>
-        <CharacterDetail
-          name={character.name}
-          image={character.image}
-          status={character.status}
-          species={character.species}
-        />
-      </li>
-    ))}
+    <li key={character.id}>
+      <CharacterDetail
+        name={character.name}
+        image={character.image}
+        status={character.status}
+        species={character.species}
+      />
+    </li>
   </ul>
 );
 
