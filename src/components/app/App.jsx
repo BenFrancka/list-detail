@@ -1,5 +1,21 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import RAndMContainer from '../../containers/RAndMContainer';
+import RAndMDetailContainer from '../../containers/RAndMDetailContainer';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/" component={RAndMContainer} />
+        <Route exact path="/:id" component={RAndMDetailContainer} />
+        {/* <Route
+          path="/:id"
+          render={(props) => (
+            <RAndMDetailContainer {...props} key={props.match.params.id} />
+          )}
+        /> */}
+      </Switch>
+    </Router>
+  );
 }
