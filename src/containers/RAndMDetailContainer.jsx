@@ -15,7 +15,7 @@ export default class RAndMDetailContainer extends Component {
 
   render() {
     const { character, loading } = this.state;
-    if (loading) {
+    if(loading) {
       return (
         <img
           src="https://thumbs.gfycat.com/SoftEarnestGyrfalcon-max-1mb.gif"
@@ -25,13 +25,11 @@ export default class RAndMDetailContainer extends Component {
     }
     return (
       <CharacterDetail
-        character={
-          (character.id,
-          character.name,
-          character.image,
-          character.species,
-          character.status)
-        }
+        id={character.id}
+        name={character.name}
+        image={character.image}
+        species={character.species}
+        status={character.status}
       />
     );
   }
