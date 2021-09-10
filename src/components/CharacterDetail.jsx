@@ -11,11 +11,15 @@ const CharacterDetail = ({ name, image, status, species }) => (
 );
 
 CharacterDetail.propTypes = {
-  id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  status: PropTypes.string.isRequired,
-  species: PropTypes.string.isRequired
+  character: PropTypes.objectOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired,
+      status: PropTypes.string.isRequired,
+      species: PropTypes.string.isRequired,
+    }).isRequired
+  ),
 };
 
 export default CharacterDetail;
