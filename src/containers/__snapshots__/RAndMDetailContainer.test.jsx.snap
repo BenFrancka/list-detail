@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RAndMDetailContainer renders a detail view of a single character 1`] = `
+<article
+  aria-label="detail-view"
+>
+  <img
+    alt="Rick Sanchez"
+    src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+  />
+  <h2>
+    Rick Sanchez
+  </h2>
+  <p>
+    Alive
+  </p>
+  <p>
+    Human
+  </p>
+</article>
+`;
