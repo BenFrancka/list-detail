@@ -9,12 +9,6 @@ export default function App() {
       <Switch>
         <Route exact path="/" component={RAndMContainer} />
         <Route exact path="/:id" component={RAndMDetailContainer} />
-        {/* <Route
-          path="/:id"
-          render={(props) => (
-            <RAndMDetailContainer {...props} key={props.match.params.id} />
-          )}
-        /> */}
       </Switch>
     </Router>
   );

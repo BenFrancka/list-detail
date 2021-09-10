@@ -1,10 +1,15 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import RAndMContainer from './RAndMContainer';
+import { MemoryRouter } from 'react-router';
 
 describe('RAndMContainer', () => {
   it('renders a list of Rick and Morty Characters to home page', async () => {
-    render(<RAndMContainer />);
+    render(
+      <MemoryRouter>
+        <RAndMContainer />
+      </MemoryRouter>
+    );
 
     screen.getByAltText('loading spinner');
 

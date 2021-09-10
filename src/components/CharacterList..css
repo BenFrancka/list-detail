@@ -1,8 +1,0 @@
-ul {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-li {
-    border: solid black 1rem;
-}

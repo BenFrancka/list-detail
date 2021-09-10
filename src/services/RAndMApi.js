@@ -18,17 +18,9 @@ export const fetchCharacterById = async (id) => {
     id: json.id,
     name: json.name,
     image: json.image,
-    statues: json.status,
+    status: json.status,
     species: json.species,
   };
-console.log(character);
+
   return character;
-  
-  // return json.then((character) => ({
-  //   id: character.id,
-  //   name: character.name,
-  //   image: character.image,
-  //   statues: character.status,
-  //   species: character.species,
-  // }));
 };
